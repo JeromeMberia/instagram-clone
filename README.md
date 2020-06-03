@@ -97,6 +97,10 @@ An Instagram clone which you can sign in view posts.
     export DB_PASSWORD='password of your database'
     export SECRET_KEY='< your secert key >'
     export DEBUG=True 
+    
+    export CLOUD_NAME="<CLOUD_NAME>"
+    export API_KEY="<API_KEY>"
+    export API_SECRET="<API_SECRET>"
     ```
 
 * Then you go to your terminal and type this to run this application
