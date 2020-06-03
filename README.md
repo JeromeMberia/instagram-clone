@@ -98,6 +98,12 @@ An Instagram clone which you can sign in view posts.
     export SECRET_KEY='< your secert key >'
     export DEBUG=True 
     
+    EMAIL_USE_TLS = True
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = 587
+    EMAIL_HOST_USER = '<Your email username>'
+    EMAIL_HOST_PASSWORD = '<The password for that email>'
+    
     export CLOUD_NAME="<CLOUD_NAME>"
     export API_KEY="<API_KEY>"
     export API_SECRET="<API_SECRET>"
