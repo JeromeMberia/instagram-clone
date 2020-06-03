@@ -5,7 +5,7 @@ from tinymce.models import HTMLField
 # Create your models here.
 class Profile(models.Model):
     name = models.ForeignKey(User,on_delete=models.CASCADE)
-    profile_photo = models.ImageField(upload_to ='images/')
+    profile_photo = CloudinaryField('image')
     bio = models.TextField()
 
     def __str__(self):
@@ -50,7 +50,7 @@ class Comment(models.Model):
         self.save()
 
 class Image(models.Model):
-    image = models.ImageField(upload_to = 'images/')
+    image = image = CloudinaryField('image')
     image_name = models.CharField(max_length = 60)
     image_caption = models.CharField(max_length = 60)
     profile = models.ForeignKey(Profile)
