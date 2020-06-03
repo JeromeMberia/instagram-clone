@@ -125,7 +125,7 @@ Design and bugs
 
 ## Link to the deployed site
 
-[Live site]()
+[Live site](https://github.com/JeromeMberia/instagram-clone/)
 
 ## Authors
 
