@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-from tinymce.models import HTMLField
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 class Profile(models.Model):
@@ -39,7 +40,7 @@ class Like(models.Model):
         self.save()
 
 class Comment(models.Model):
-    comments =models.CharField(max_length= 90,blank= True)
+    comments = models.CharField(max_length= 90,blank= True)
     post_by = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey('insta_app.Image', on_delete=models.CASCADE, related_name='opinions')
 
@@ -49,11 +50,14 @@ class Comment(models.Model):
     def save_comment(self):
         self.save()
 
+    def delete_comment(self):
+        self.delete()
+
 class Image(models.Model):
-    image = image = CloudinaryField('image')
+    image = CloudinaryField('image')
     image_name = models.CharField(max_length = 60)
     image_caption = models.CharField(max_length = 60)
-    profile = models.ForeignKey(Profile)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     likes = models.ForeignKey(Like, null=True)
     comments = models.ForeignKey(Comment,on_delete=models.CASCADE, null=True, blank=True)
 
