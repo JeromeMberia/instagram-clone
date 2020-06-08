@@ -1,0 +1,64 @@
+body{
+    background-color: #FAFAFA;
+}
+
+.card-body{
+    height: auto;
+    width: 10rem;
+}
+.card-header, .card-footer{
+    background-color: white;
+}
+.flex-container {
+    display: flex;
+    align-items: stretch;
+    background-color: white;
+}
+
+.flex-container > div {
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+.account-img {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.card{
+    border-top: 0;
+    border-top: 0;
+    margin-bottom:0;
+    padding: 0;
+    background-color: white;
+}
+
+.img-area{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.single-img{
+    padding: 0 20px 20px;
+    flex-basis: auto;
+}
+
+@media (max-width:400px) {
+    .people img{
+        float:left; 
+        width:33.33%;
+        padding: 5px;
+    }
+}
+@media (max-width:400px) {
+    .people img{
+        float:left; 
+        width:100%;
+        padding: 5px;
+    }
+}
